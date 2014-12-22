@@ -1,0 +1,28 @@
+{
+  "name": "HabitUI",
+  "version": "0.0.0",
+  "description": "HabitUI =======",
+  "main": "views/index.html",
+  "scripts": {
+    "test": "echo 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wesolyromek/HabitUI.git"
+  },
+  "author": "Adam Paszke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wesolyromek/HabitUI/issues"
+  },
+  "homepage": "https://github.com/wesolyromek/HabitUI",
+  "dependencies": {
+    "angular": "^1.3.8",
+    "angular-ui-router": "^0.2.13",
+    "bootstrap": "^3.3.1"
+  },
+  "window": {
+    "frame": true,
+    "toolbar": false
+  }
+}
