@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HabitRPG</title>
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/habitUI.css" rel="stylesheet">
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="../node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="../node_modules/angular-resource/angular-resource.js"></script>
+    <script src="../js/init.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/controllers.js"></script>
+    <script src="../js/resources.js"></script>
+  </head>
+  <body ng-app="HabitDesktop" ng-controller="AppCtrl">
+
+    <div class="cover" ng-hide="ready">
+      <div class="init-container">
+        <div class="init-dialog">
+          <img src="../img/chest.png" alt="">
+          <h2>Loading...</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="sidebar col-xs-4">
+        </div>
+        <div class="col-xs-8 col-xs-offset-4">
+          <div ui-view></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var gui = require('nw.gui');
+
+      // Get the current window
+      var win = gui.Window.get();
+
+      win.y = 40;
+      win.x = 40;
+      win.showDevTools();
+    </script>
+  </body>
+</html>
