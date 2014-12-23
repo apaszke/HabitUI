@@ -1,3 +1,72 @@
+h2 {
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+input[type=checkbox] {
+	-webkit-appearance: none;
+	background-color: #fafafa;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 6px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+  outline: none;
+}
+
+input[type=checkbox]:focus {
+  outline: none;
+}
+
+input[type=checkbox]:active, input[type=checkbox]:checked:active {
+  outline: none;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+input[type=checkbox]:checked {
+	border: 1px solid #adb8c0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+}
+
+input[type=checkbox]:checked:after {
+  font-family:'Glyphicons Halflings';
+	content: '\e013';
+	font-size: 9px;
+	position: absolute;
+	top: 0px;
+	left: 1px;
+	color: #5fb760;
+}
+
+.item-check {
+  width:20px;
+}
+
+.item-controls {
+  text-align:right;
+}
+
+.item-controls .glyphicon {
+  font-size: 12px;
+}
+
+.item-button {
+  color: #999;
+  margin-left: 4px;
+  display: inline-block;
+}
+
+.item-button:hover {
+  color: #333;
+  cursor: pointer;
+}
+
+.no-pointer {
+  cursor: auto;
+}
+
 .sidebar {
   position: fixed;
   top: 0;
@@ -5,15 +74,10 @@
   left: 0;
   z-index: 1000;
   display: block;
-  padding: 20px;
+  padding: 0 20px;
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
   background-color: #f5f5f5;
   border-right: 1px solid #eee;
-}
-
-h2 {
-  margin-top: 10px;
-  font-size: 24px;
-  font-weight: 300;
+  color: #777;
 }

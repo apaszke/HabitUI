@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hello World!</title>
+    <title>HabitRPG</title>
     <script src="../node_modules/angular/angular.js"></script>
     <script src="../node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="../js/index.js"></script>
@@ -11,18 +11,54 @@
   <body>
     <div class="container-fluid">
       <div class="row">
-        <div class="sidebar col-xs-4"></div>
+        <div class="sidebar col-xs-4">
+        </div>
         <div class="col-xs-8 col-xs-offset-4">
           <h2>Daily</h2>
           <table class="table">
             <tr>
-              <td><input type="checkbox"></td>
+              <td class="item-check"><input type="checkbox"></td>
               <td>Item 1</td>
+              <td class="item-controls">
+                <div class="item-button">
+                  (3<span class="glyphicon glyphicon-repeat"></span>)
+                </div>
+                <div class="item-button">
+                  <span class="glyphicon glyphicon-pencil"></span>
+                </div>
+                <div class="item-button">
+                  <span class="glyphicon glyphicon-ban-circle"></span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="item-check"><input type="checkbox"></td>
+              <td>Item 1</td>
+              <td class="item-controls">
+                <div class="item-button">
+                  (1<span class="glyphicon glyphicon-repeat"></span>)
+                </div>
+                <div class="item-button">
+                  <span class="glyphicon glyphicon-pencil"></span>
+                </div>
+                <div class="item-button">
+                  <span class="glyphicon glyphicon-ban-circle"></span>
+                </div>
+              </td>
             </tr>
           </table>
         </div>
       </div>
     </div>
-    <script>require('nw.gui').Window.get().showDevTools()</script>
+    <script>
+      var gui = require('nw.gui');
+
+      // Get the current window
+      var win = gui.Window.get();
+
+      win.y = 40;
+      win.x = 40;
+      win.showDevTools();
+    </script>
   </body>
 </html>
